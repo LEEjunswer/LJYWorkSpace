@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    .container{
+  border:1px solid black;
+margin: auto;
+width: 400px;
+padding: 20px;
+text-align: center;
+font-weight: bold;
+margin-bottom: 20px;
+    }
+    .title{
+background-color: #eee;
+    }
+    .heart i{
+      font-size: 40px;
+      color: red;
+      margin-top: 10px;
+      animation: bouns 1s ease-in-out infinite;
+    }
+    .star i{
+      font-size: 40px;
+      color:  yellow;
+      margin-top: 20px;
+      animation: bouns 1s ease-in-out infinite;
+    }
+    .loading i{
+      font-size: 40px;
+      color: black;
+      margin-top: 20px;
+      animation: turn 1s linear infinite;
+    }
+    .mouse1 i{
+      margin-right: 40px;
+      font-size: 40px;
+      color: hotpink;
+      margin-top: 20px;
+      animation: blind 1s ease-in-out infinite;
+    }
+    .mouse2 i{
+      margin-left: 150px;
+      margin-top: 20px;
+      font-size: 40px;
+      animation: tothemasr 1s ease-in-out infinite;
+    }
+    @keyframes bouns {
+      0%{
+        transform: scale(1.2);
+      }
+      60%{
+transform:scale(0.9);
+      }
+      100%{
+transform: scale(1.2);
+      }
+    }
+    @keyframes turn{
+      0%{
+        transform: rotate(0deg) translateY(0px);
+      }50%{
+        transform: rotate(180deg) translateY(0px);
+      }100%{
+        transform: rotate(360deg) translate(0px);
+      }
+    }
+    @keyframes blind {
+      10%{
+        opacity: 0.5;
+      }60%{
+        opacity: 0.1;
+      }
+      100%{
+        opacity: 0.0;
+      }
+      
+    }
+    @keyframes tothemasr {
+      10%{
+        transform: skew(45deg, 45deg);
+      }60%{
+        transform: matrix3d(0.5turn);
+      }
+      100%{
+        transform:matrix(1, 2, 3, 4, 5, 6);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">애니메이션 예시 1</div>
+    <div class="contents">
+      <div class="heart">
+        <i class="fa fa-heart"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">애니메이션 예시 2</div>
+    <div class="contents">
+      <div class="star">
+        <i class="fa fa-star"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">애니메이션 예시 3</div>
+    <div class="contents">
+      <div class="mouse1">
+        <i class="fa fa-volume-off"></i>
+      </div>
+      <div class="mouse2">
+        <i class="fa fa-power-off"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="title">애니메이션 예시 4</div>
+    <div class="contents">
+      <div class="loading">
+        <i class="fa fa-refresh"></i>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
