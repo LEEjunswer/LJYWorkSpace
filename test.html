@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ .box1 {
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+.text1 {
+    font-size: 24px;
+    height: 3em;
+    background-color: pink;
+}
+*{
+  color: red;
+}
+div{
+  color: yellow ;
+}
+#text-id{
+  color: rgb(red, #1e526d, blue);
+
+  /* 1은 불투명 ~ 0에 가까울수록 투명 */
+  opacity: 0.95;
+}
+.text-class{
+  /* 알파값 : opacity */
+  color:rgb(red, rgb(64, 168, 173,25)) !important;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="text1">이 박스의 세로 사이즈는 몇 px일까요?</div>
+</div>
+<hr>
+<div class="text1" id="id">김치</div>
+
+<!-- 안에 자체적으로 스타일을 주면 먼저 값을 받는다. -->
+<div class="text1" style="background-color: aquamarine;">이 박스 안 에 있습니다</div> 
+
+
+</body>
+</html>

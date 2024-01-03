@@ -14,8 +14,17 @@
     div{
       border: 1px solid palevioletred ;
       /* 100% 부모를 기준으로 100% */
-      width: 60px;
+      width: 80px;
       height: 80px;
+      padding: 10px;
+      /* 박스3은 width 80 height 80이고 padding 10*2 + border 1*2이다 */
+    }
+    #c{
+      /* 디폴트 값은 box-sizing: content-box; 이다 */
+  box-sizing: content-box;
+    }
+    #d{
+    box-sizing: border-box;
     }
   </style>
 </head>
