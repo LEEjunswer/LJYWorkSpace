@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- <button class="btn-open" type="button" onclick="section()">뉴스레터 구독하기</button> -->
+  <section>
+    <div class="select">
+      <img src="./office.jpg" alt="office">
+      <content>
+        <h2>지금 다양한 혜태을 받아보세요</h2>
+        <input type="email" value="이메일 주소를 입력하세요">
+        <button class="btn-submit">뉴스레터 구독하기</button>
+        <p>스타트업메이트 뉴수룸의 다양한 소식과 혜택을 이메일로 받아 보시려면 구독 신청 해주시기 바랍니다. 스타트업메이트에 대해 알고 싶은 뉴스,
+          꼭 알아야할 뉴스를 신속하고 정확하게 전달합니다.
+        </p>
+      </content>
+    </div>
+  </section>
+</body>
+
+</html>
+<script>
+  $(function () {
+    $(".btn-open").click(function () {
+      $(".select").show();
+    });
+  });
+</script>

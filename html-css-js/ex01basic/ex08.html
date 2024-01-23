@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function clac() // 유저의 입력값이 정답인지 봐주는 함수
+    {
+      let total = 0; // 초기화
+      let questionArray = document.getElementsByClassName("question"); // 여러개니깐 배열로 짜준다.
+      let answerArray = document.getElementsByClassName("answer");
+
+      for (i = 0; i < questionArray.length; i++) {
+        let question = questionArray[i].innerHTML;
+        let correctanswer = eval(question); // eval은 계산함수
+        let useranswer = answerArray[i].value;
+
+        //console.log(answerArray[i].value);
+
+        //console.log("useranswer :"+ useranswer);
+        console.log("parseInt(useranswer) : " + parseInt(useranswer));
+        console.log("correctanswer: " + correctanswer);
+
+        // 경우의 수 3개 : 답이 없거나 문자로 입력 / 정답 / 오답일 경우
+
+        if (useranswer == "" || isNaN(useranswer)) // 답이 없거나
+        {
+          total += 0;
+          questionArray[i].style.textDecoration = "line-through";
+        } else if (parseInt(useranswer) == correctanswer) // 정답
+        {
+          total += 1;
+          questionArray[i].style.textDecoration = "none";
+        } else // 오답
+        {
+          total += 0;
+          questionArray[i].style.textDecoration = "line-through";
+        }
+      }
+      document.getElementById("score").innerHTML = total;
+    }
+
+    function makeQuiz() {
+      let questionArray = document.getElementsByClassName("question");
+      let answerArray = document.getElementsByClassName("answer");
+      for (let i = 0; i < questionArray.length; i++) {
+        let num1 = Math.floor(Math.random() * 30) + 1;
+        let num2 = Math.floor(Math.random() * 30) + 1;
+        let op = Math.floor(Math.random() * 4);
+        let operator = "+";
+        switch (op) {
+          case 0:
+            operator = "+";
+            break;
+          case 1:
+            operator = "-";
+            break;
+          case 2:
+            operator = "*";
+            break;
+          case 3:
+            operator = "/";
+            break;
+        }
+        questionArray[i].innerHTML = num1 + operator + num2;
+        questionArray[i].style.textDecoration = "none";
+        answerArray[i].value = ""; // 초기화
+        document.getElementById("score").innerHTML = 0; // 초기화
+      }
+    }
+  </script>
+</head>
+
+
+<body onload="makeQuiz()">
+  <h1>산수 문제를 풀어 봅시다.</h1>
+  <h2>수식을 계산하여 답을 입력하고 채점 버튼을 누르세요</h2>
+  <hr>
+  <table>
+    <div class="question">
+      <span></span> <input type="number" class="answer" />
+    </div>
+    <div class="question">
+      <span></span> <input type="number" class="answer" />
+    </div>
+    <div class="question">
+      <span></span> <input type="number" class="answer" />
+    </div>
+    <div class="question">
+      <span></span> <input type="number" class="answer" />
+    </div>
+    <div class="answerT">
+      <button onclick="clac()">채점</button>
+      <span class="score">0 점</span>
+      <button onclick="makeQuiz()">다시</button>
+    </div>
+  </table>
+</body>
+
+</html>

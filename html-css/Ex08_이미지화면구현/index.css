@@ -1,0 +1,183 @@
+ /* Fontawesome 4.7 */
+ @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+ /* reset CSS */
+ a{ text-decoration: none; color: #222;}
+ h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
+ button{cursor: pointer; outline: none; border: none;}
+ input,textarea,select{
+   outline: none;
+ } 
+ body{margin: 0; 
+   height: 100vh;
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ button,input,textarea,select{
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ 
+ section{
+margin: auto;
+  /* border: 1px solid black; */
+  width: 950px;
+  height: 600px;
+ }
+ .section-header{
+  
+ }
+ .gnb{
+  padding: 30px 0;
+  text-align: right;
+ }
+ .gnb a{
+  margin: 15px;
+  position: relative;
+  padding-bottom: 8px;
+ }
+ .gnb a:last-child{
+margin-right: 0;
+ }
+ /* content:'', position */
+ .gnb a::after{
+  transition: 0.3s;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black; 
+  transform: translateX(-50%);
+ }
+ .gnb a:hover:after{
+    width: 100%;
+ }
+ .searching-box{
+  /* border:  1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+ }
+ .searching-box input{
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  background: url(images/search.png) no-repeat center right;
+  /* 이미지를 포토샵으로 줄일 필요없이 size로 값 줄 수 있다. */
+  background-size: 22px;
+  width: 300px;
+  font-size:  18px;
+  box-sizing: border-box;
+ }
+ .searching-box button{
+  background-color: crimson;
+  color: white;
+  border-radius: 6px;
+  padding: 13px 60px;
+  font-size: 18px;
+  box-shadow: 5px 5px 10px darkgrey;
+ }
+ .items{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+ .item{
+ margin: 5px;
+  width: calc(100%/3 - 10px);
+  height: 200px;
+  margin-bottom: 10px;
+  overflow: hidden;
+ }
+ .item img{
+ margin-bottom: 3px;
+  width: 100%;
+ }
+ /* description */
+ .desc{
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.3);
+  height: 60px;
+  left: 0;
+  bottom :-60px;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+ }
+ .item:hover .desc{
+  bottom: 5px;
+ }
+
+ .desc h6{
+  font-size: 16px;
+  margin-bottom: 5px;
+ }
+ .desc .like{
+  display: flex;
+justify-content: space-between;
+}
+ 
+ .like span{
+  font-size:  13px;
+ }
+  
+ .like span:nth-child(1) .fa{
+  color: crimson;
+ }
+
+ @media screen and (max-width:768px) {
+  body{
+    display: flex;
+  }
+  section{
+    width: 100%;
+  }
+  .section-header{
+    display: flex;
+    flex-direction: column;
+  }
+  .gnb{
+    text-align: center;
+
+  }
+  .searching-box{
+    width: 100%;
+  
+    /* displa y: flex; */
+    flex-direction: column;
+  }
+  .searching-box input{
+  width: 100%;
+  margin: 10px 0;
+}
+.searching-box button{
+
+  width: 100%;
+  margin: 10px 0;
+}
+.items{
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  width: 100%;
+  height: auto;
+  
+}
+
+ }
+
+ @media (min-width:768px) and (max-width:1024px){
+    section{
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }  
+  .item{
+      width: calc(100%/2 - 10px);
+    }
+    
+}
+ 

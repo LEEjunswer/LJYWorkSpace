@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+    }
+    .container{
+      border: 10px solid black;
+      height: 100%;
+      box-sizing: border-box;
+      background-color: bisque;
+      display: flex;
+      flex-direction: column;
+    }
+    header{
+      flex: 1;
+    background-color: hotpink;
+    }
+    section{
+      flex: 8;
+      display: flex;
+    }
+    article{
+      flex: 1;
+  border-color: palegreen;
+    }
+    aside{
+      flex: 8;
+      background-color: blue;
+    }
+    nav{
+  width: 100px;
+    }
+    footer{
+      flex: 1;
+      background-color: aqua;
+    }
+    header,article,aside,nav,footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /*
+    [1] 컨텐츠 너비 width : 1200- 1300px ~ > 100%
+    [2] flex 박스 row -> flex-direction : cloumn 
+     */
+    @media(max-width:768px){
+      section{
+        flex-direction: column;
+      }
+      nav{
+        flex:2;
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <section>
+      <article>article</article>
+      <aside>aside</aside>
+      <nav>nav</nav>
+    </section>
+    <footer>footer</footer>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    body {
+      margin: 0;
+      height: 100vh;
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    header {
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .lnb-inner,
+    .gnb-inner {
+      transition: 0.5s;
+    }
+
+    header.active .lnb-inner {
+      height: 0;
+      /* display: none; */
+    }
+
+    header.active .gnb-inner {
+      background-color: white;
+      color: black;
+      box-shadow: 0 3px #000;
+    }
+
+    .lnb-inner {
+      background-color: crimson;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .gnb-inner {
+      background-color: black;
+      height: 80px;
+      line-height: 80px;
+    }
+
+
+    section {}
+
+    section p {
+      color: #ddd;
+      font-size: 3em;
+      line-height: 1em;
+    }
+
+    .btn-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      font-size: 30px;
+      background-color: crimson;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 1s;
+    }
+
+    .btn-top.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="lnb-inner">LAN inner</div>
+      <div class="gnb-inner">GNB inner</div>
+    </header>
+    <section>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus porro quo accusamus mollitia modi esse
+        provident delectus quidem inventore consectetur veritatis accusantium recusandae maiores reprehenderit eveniet
+        voluptatibus officiis omnis ipsa quam perferendis, veniam enim totam nobis? Libero cum blanditiis sequi aut
+        numquam nulla similique, quidem doloremque inventore ratione! Nesciunt, placeat ipsa dicta blanditiis quia quasi
+        ipsam reprehenderit, sint repudiandae nihil, perspiciatis iure tenetur dolorum nisi autem ex dolore facere?
+        Porro quae soluta est asperiores aut placeat voluptate perspiciatis eius, beatae excepturi suscipit molestiae
+        facere repellendus deleniti atque at mollitia recusandae odit in deserunt. Alias quasi eius odio? Itaque dolor
+        velit facere sapiente, officiis reprehenderit omnis sed mollitia corrupti culpa beatae facilis sint nesciunt
+        commodi esse ea soluta debitis recusandae incidunt eaque sequi! Laboriosam ex explicabo magni impedit
+        reprehenderit a odit minus perferendis necessitatibus iure? Numquam illo ipsa quo iure ullam, exercitationem,
+        assumenda minus in dolorem consequatur saepe hic, vero voluptate. Quibusdam temporibus vitae inventore possimus
+        ut quam qui eos! Fuga laborum tempora omnis, et, dolores ex ea rerum architecto neque vel tempore accusantium
+        sit dolorem consectetur ab quis iste, fugit exercitationem? Eligendi tempore nam voluptas! Deleniti corporis
+        eligendi in exercitationem at quam! Eveniet, enim fugit fugiat laborum a beatae aspernatur perferendis dolorum
+        quae, delectus amet? Tempore rem quas optio est aliquam iure enim consequuntur quo corporis assumenda maxime
+        repellat illum dolor voluptatem hic, culpa doloremque similique voluptatibus neque nostrum eveniet suscipit
+        doloribus nisi. Magni ullam possimus consequuntur, nam delectus fugiat ipsum odit veniam quisquam dicta esse
+        sint qui iste assumenda officiis obcaecati modi tempora debitis eligendi quos illum? Ipsam quia in unde
+        praesentium et iusto officia ducimus. Placeat dicta deleniti quas accusamus ipsam pariatur voluptatibus illo
+        nesciunt earum alias impedit provident doloribus, voluptas dolore quibusdam tempore consequuntur eaque quis
+        aspernatur fuga dolores vitae quaerat. Omnis tempore vel inventore. Repudiandae, itaque?</p>
+    </section>
+  </div>
+  <a href="#" class="btn-top"><i class="fa fa-arrow-up"></i></a>
+</body>
+<script>
+  // 스크롤을 내리면(윈도우== 브라우저) 어떤 반응을 하고 싶다 => 윈도우 객체를 가지고 와야 한다.
+  $(window).scroll(
+    function () {
+      // 화면의 위쪽을 기준으로 값을 가져오는 애 50보다 크다 -> 스크롤을 조금이라도 내렸다.
+      if ($(this).scrollTop() > 50) {
+        $('header, .btn-top').addClass('active');
+
+      } else {
+        $('header, .btn-top').removeClass('active');
+      }
+    }
+  );
+</script>
+
+</html>

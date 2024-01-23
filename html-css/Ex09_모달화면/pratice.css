@@ -1,0 +1,25 @@
+ /* Fontawesome 4.7 */
+ @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+ /* reset CSS */
+ a{ text-decoration: none; color: #222;}
+ h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
+ button{cursor: pointer; outline: none; border: none;}
+ input,textarea,select{
+   outline: none;
+ } 
+ body{margin: 0; 
+ 
+   height: 100vh;
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ button,input,textarea,select{
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ .btn-open{
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+ }
+ 

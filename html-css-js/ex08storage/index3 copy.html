@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="saveForm">
+    <input type="text" class="text">
+    <input type="submit" value="저장하기">
+    <!-- <button class="submit">저장하기</button> -->
+  </form>
+
+  <br>
+  <form id="deleteForm">
+    <input type="text" class="text1">
+    <input type="submit" value="삭제하기">
+    <!-- <button class="submit">저장하기</button> -->
+  </form>
+  <br>
+  <br>
+  <div class="save"></div>
+</body>
+
+</html>
+<script>
+  const save = document.querySelector('.save');
+  // const submit = document.querySelector(`input[type='submit']`);
+  // const input = document.querySelector(`input[type='text']`);
+
+
+
+
+
+
+  // submit.addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   // submit 요청값을 가지고 어디론가(서버로) 간다;
+  //   localStorage.setItem("input.value", input.value);
+  //   text.value = '';
+  //   // window.location.reload();   // 페이지 새로고침
+  //   save.innerHTML = localStorage.getItem('input.value');
+  // })
+  // save.innerHTML = localStorage.getItem('input.value');
+
+  const formAdd = document.querySelector("#saveForm");
+  const formDel = document.querySelector("#deleteForm");
+  const input = formAdd.querySelector('input');
+  const del = formDel.querySelector('.text1');
+  let arr = [];
+  formAdd.addEventListener('submit', e => {
+    e.preventDefault();
+    localStorage.setItem('input_value', input.value);
+    input.value = "";
+    arr.push(localStorage.getItem('input_value'));
+    console.log(arr);
+
+    save.innerHTML = "";
+    arr.forEach(arrs => {
+      save.innerHTML += arrs + ",";
+    })
+    localStorage.setItem("arr", JSON.stringify(arr));
+  })
+  formDel.addEventListener('submit', e => {
+    e.preventDefault();
+    let delDataIdx = arr.findIndex(value => value === del.value);
+    if (delDataIdx == -1) {
+      return;
+    }
+    del.value = "";
+    arr.splice(delDataIdx, 1);
+    save.innerHTML = "";
+    arr.forEach(arrs => {
+      save.innerHTML += arrs + ",";
+    })
+  });
+  localStorage.setItem("arr", JSON.stringify(arr));
+</script>

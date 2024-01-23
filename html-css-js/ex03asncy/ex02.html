@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  // setTimeout(콜백함수 , 초(millsec));  1*1000; =>1초다
+  // 
+  let cnt = 0;
+  let sayHi = () => {
+    console.log("sayhi~~~", ++cnt);
+  }
+  // setInterval(sayHi, 2500);
+  const Inter = setInterval(sayHi, 1000);
+  setTimeout(() => {
+    console.log("10초뒤에 실행");
+    clearInterva(Inter);
+  }, 10000);
+  l
+</script>

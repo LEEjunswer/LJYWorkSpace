@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent{
+      border : 1px solid black;
+      display: flex;
+    }
+    .child{
+      height: 100px;
+      background-color: hotpink;
+      margin: 10px;
+      display: flex;
+      /* 텍스트 정렬하는 첫번째 방법 */
+    }
+    .child:nth-child(1){
+      
+      width: 200px;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .child:nth-child(2){
+      flex: 1;
+      /* width: 200px; */
+      background-color: rebeccapurple;
+     /* line-height: 100px;
+     text-align: center; */
+     justify-content: center;
+      align-items: center;
+    }
+    .child:nth-child(3){
+      flex:8;
+      /* width: 200px; */
+      background-color: aquamarine;
+      justify-content: center;
+      align-items: center;
+    }
+    .child:nth-child(4){
+      flex:0.5;
+      background-color: chartreuse;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      height: 100px;
+      text-align: center;
+      background-color: lightblue;
+      width: 100%;
+      line-height: 100px;
+    }
+
+    p {
+      text-align: center;
+      line-height: 400px;
+      font-size: 36px;
+      font-size: bold;
+      height: 400px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <label for="">유저 ID</label>
+    <input type="text" class="serach">
+  </main>
+  <p class="user">유저 검색 결과 없음</p>
+</body>
+
+</html>
+<script>
+  const userDataList = [{
+      id: 123,
+      name: '이준영'
+    },
+    {
+      id: 240,
+      name: '둘리'
+    },
+    {
+      id: 350,
+      name: '호두'
+    }
+  ]
+  const check = document.querySelector('.serach');
+  const user = document.querySelector('.user');
+  check.addEventListener('keyup', () => {
+    for (let i = 0; i < userDataList.length; i++) {
+      if (userDataList[i].id == check.value) {
+        user.innerText = userDataList[i].name;
+      }
+    }
+  })
+</script>

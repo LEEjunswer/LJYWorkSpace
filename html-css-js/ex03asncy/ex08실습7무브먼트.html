@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      height: 50px;
+      width: 50px;
+      background-color: royalblue;
+      margin: 5px 0;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+</body>
+
+</html>
+<script>
+  const boxs = [...document.querySelectorAll(".box")];
+
+  function start() {
+    let interval1 = setInterval(() => {
+      let moveright = box.style.left || '0px';
+      box.style.left = (parseInt(moveright) + 1) + 'px';
+      if (box.style.left == 600 + 'px') {
+        clearInterval(interval1);
+      }
+    }, 10);
+  }
+  boxs.forEach(box => {
+    box.addEventListener('click', () => {
+      start();
+    });
+  });
+</script>
+
+</html>

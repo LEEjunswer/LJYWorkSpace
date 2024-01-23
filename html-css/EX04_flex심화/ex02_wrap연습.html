@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+
+
+    }
+
+    .container {
+      display: flex;
+      height: 30vh;
+      line-height: 30vh;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+    }
+
+    box {
+      /* grow shrink basic */
+      flex: 1;
+      color: white;
+      /* basis로 값을 주지 않으면 부모 flex wrap해도 적용이 안된다 */
+      /* min-width: 300px; */
+      background-color: pink;
+      margin: 10px;
+      flex-basis: 300px;
+    }
+  </style>
+</head>
+<div class="container">
+  <box>1</box>
+  <box>2</box>
+  <box>3</box>
+</div>
+
+<body>
+
+</body>
+
+</html>

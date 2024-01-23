@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      text-align: center;
+    }
+
+    main {
+      height: 300px;
+      width: 100%;
+    }
+
+    div {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="time"></div>
+    <div class="second"></div>
+  </main>
+</body>
+
+</html>
+
+<script>
+  const min = document.querySelector('.time');
+  const second = document.querySelector('.second');
+  let time1 = 15.00;
+
+  function t1() {
+
+  }
+  let interval = setInterval(function () {
+    time1 -= 0.01;
+    min.innerHTML = time1.toFixed(2);
+    if (time1 < 0) {
+      clearInterval(interval);
+      min.textContent = "15초가 지났습니다"
+    }
+  }, 10);
+
+  // let time2 = 0;
+
+
+  // function check() {
+  //   if (time2 == 0) {
+  //     time1--;
+  //     time2 = 99;
+  //   }
+  //   if (time2 < 9) {
+
+  //   }
+  // }
+</script>

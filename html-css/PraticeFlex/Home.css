@@ -1,0 +1,179 @@
+ /* Fontawesome 4.7 */
+ @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+ /* reset CSS */
+ a{ text-decoration: none; color: #222;}
+ h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
+ button{cursor: pointer; outline: none; border: none;}
+ input,textarea,select{
+   outline: none;
+ } 
+ body{margin: 0; 
+ 
+   height: 100vh;
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ button,input,textarea,select{
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ section{
+  width: 100%;
+  height: 720px;
+  margin: auto;
+  border: 1px solid black;
+ }
+ section .header{
+  border: 1px solid blue;
+  height: 65px;
+  display: flex;
+  justify-content:space-around;
+  width: 100%;
+
+
+ }
+.header .left{
+  display: flex;
+  width: 375px;
+
+ }
+ .header .center{
+  display: flex;
+  width: 763px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid cornflowerblue;
+  background: url(./city.png) no-repeat center;
+  background-size: cover;
+ }
+
+ h1{
+  color: red;
+ }
+ h1 span{
+  color: blue;
+ }
+ .right{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+ }
+ .right :nth-child(1){
+  margin-right: 10px;
+ }
+ .right :nth-child(2){
+  margin-right: 10px;
+ }
+ .right :nth-child(3){
+  margin-right: 10px;
+ }
+ .right :nth-child(4){
+  margin-right: 10px;
+ }
+ 
+ .header a{
+  font-size: 20px;
+  color: lightslategray;
+ }
+ .middle{
+  border: 1px solid red;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+ }
+ .aside{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+ }
+ .aside header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  border: 1px solid red;
+  background: url(./blog-post-03.jpg) no-repeat center;
+  background-size: cover;
+  flex: 1;
+ }
+ .aside mid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid pink;
+  background: url(./blog-post-01.jpg) no-repeat center;
+  background-size: cover;
+  flex: 1;
+ }
+ .aside bottom{
+  display: flex;
+  justify-content: center;
+  background: url(./blog-post-02.jpg) no-repeat center;
+  background-size: cover;
+  align-items: center;
+  flex: 1;
+ }
+ .aside header a{
+  color: hotpink;
+ }
+ .aside mid a{
+  color: blue;
+ }
+ .aside bottom a{
+  color: crimson;
+ }
+ .img{
+  /* display: flex ; */
+  /* position:fixed; */
+  border: 1px solid gold;
+  flex: 2;
+  background: url(./office.jpg) no-repeat center;
+  background-size: cover;
+ }
+ .login-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border: 1px solid forestgreen;
+  flex-direction: column;
+  position: relative;
+  }
+  .login-form .id{
+    position: absolute;
+    top: 40%;
+    left: 10px;
+
+  }
+  .login-form .id input{
+    margin-left: 15px;
+
+  }
+  .login-form .password{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+  }
+  .login-form .submit{
+    border: 1px solid saddlebrown;
+    position: absolute;
+    right: 30px;
+    height: 55px;
+    width: 100px;
+    }
+    .submit button{
+      width: 100%;
+      line-height: 55px;
+      background-color: green;
+      font-weight: bold;
+      color: white;
+    }
+    .footer{
+      border:1px solid slategrey;
+      height: 100px;
+      width: 100%;
+    }
+ 
+ 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      height: 100%;
+       }
+  .contaniner{
+    
+margin: 0;
+}
+header{
+  
+  height: 15%;
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+}
+section{
+  height: 70%;
+  display: flex;
+  text-align: center;
+}
+article1{
+  background-color: yellow;
+  
+  line-height:500px;
+  flex:1;
+}
+article2{
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:8;  
+}
+
+article3{
+  background-color: green;
+  
+  line-height:500px;
+  flex:1;
+  
+}
+footer{
+  background-color: hotpink;
+  height: 15%;
+  text-align: center;
+  line-height:100px;
+}
+@media(max-width:768px){
+  section{
+    width: 100%;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <section>
+      <article1>left</article1>
+      <article2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil aspernatur quis exercitationem, voluptatem praesentium, itaque molestiae similique suscipit,libero nesciunt repellat fugit error cumque debitis ea fuga a quaerat illo.</article2>
+      <article3>right</article3>
+    </section>
+    <footer>footer</footer>
+  </div>
+  
+  
+</body>
+</html>

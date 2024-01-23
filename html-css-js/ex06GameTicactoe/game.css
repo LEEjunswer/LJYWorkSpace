@@ -1,0 +1,91 @@
+*{
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  }
+.container{
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+
+}
+table.off{
+  margin-left: 0;
+  height: 800px;
+  width: 100%;
+  background-color: pink;
+  border: 0px solid white;
+}
+td.off{
+  border: 1px solid white;
+}
+
+table{
+      margin-left: 490px;
+     height: 550px;
+    width: 550px;
+    border: 3px solid black;
+  }
+  td{
+    height: 33%;
+    width: 33%;
+    border: 1px solid red;
+  }
+  td.on{
+    background-color: crimson;
+    color: white;
+  }
+  td.com{
+    background-color: blueviolet;
+    color: white;
+  }
+  winO{
+    display: none;
+  }
+  winO.on{
+    display: inline;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    height: 300px;
+    width: 500px;
+    background-color: red;
+    color: white;
+    line-height: 300px;
+    font-size: 45px;
+
+  }
+  winX{
+  display: none;
+  } 
+  
+  winX.on{
+    display:inline;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    height: 300px;
+    width: 500px;
+    background-color: violet;
+    color: white;
+    line-height: 300px;
+    font-size: 45px;
+  }
+
+  draw{
+    display: none;
+    } 
+    
+    draw.on{
+      display:inline;
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      height: 300px;
+      width: 500px;
+      background-color: royalblue;
+      color: white;
+      line-height: 300px;
+      font-size: 45px;
+    }
+  

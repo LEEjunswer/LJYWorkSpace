@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas" width="800" height="400"></canvas>
+  <input type="color" id="color">
+  <!-- <input type="size" id="size"> -->
+</body>
+
+</html>
+<script>
+  const canvas = document.querySelector('#canvas');
+  const ctx = canvas.getContext('2d');
+  let color = document.querySelector('#color');
+  ctx.beginPath();
+  ctx.arc(0, 150, 10, 0, Math.PI * 2)
+  ctx.fillStyle = color;
+  ctx.fill();
+  color = color.vaule;
+  let cnt = 0;
+  let s = 0;
+  let check = setInterval(() => {
+    ctx.arc(cnt, s, 10, 0, Math.PI * 2);
+    // ctx.fillStyle = color;
+    cnt++;
+    s += 1;
+    ctx.fill();
+    if (cnt === 700) {
+      clearInterval(check);
+    }
+    if (s === 300) {
+      clearInterval(check);
+    }
+  }, 10);
+
+  canvas.addEventListener('click', e => {
+    clearInterval(check);
+  })
+</script>

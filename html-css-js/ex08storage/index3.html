@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <input type="text" class="text">
+    <input type="submit" value="저장하기">
+    <!-- <button class="submit">저장하기</button> -->
+  </form>
+  <div class="save"></div>
+</body>
+
+</html>
+<script>
+  const save = document.querySelector('.save');
+  // const submit = document.querySelector(`input[type='submit']`);
+  // const input = document.querySelector(`input[type='text']`);
+
+
+
+
+
+
+  // submit.addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   // submit 요청값을 가지고 어디론가(서버로) 간다;
+  //   localStorage.setItem("input.value", input.value);
+  //   text.value = '';
+  //   // window.location.reload();   // 페이지 새로고침
+  //   save.innerHTML = localStorage.getItem('input.value');
+  // })
+  // save.innerHTML = localStorage.getItem('input.value');
+
+  const form = document.querySelector("form");
+  const input = form.querySelector('input');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    localStorage.setItem('input_value', input.value);
+    input.value = "";
+    save.innerHTML = localStorage.getItem('input_value');
+  })
+  save.innerHTML = localStorage.getItem('input_value');
+
+
+  const myCat = {
+    name: "느",
+    age: 12
+  }
+  // 객체를 String 바꾸는 방법 => JSON
+
+  const myArray = [10, 20, 30, 40];
+
+  let data = JSON.stringify(myCat);
+
+  localStorage.setItem("myCat", data)
+  localStorage.setItem("myArr", JSON.stringify(myArray));
+
+  document.write(localStorage.getItem("myCat"))
+  document.write(localStorage.getItem("myArr") + "<br>")
+
+  let test = localStorage.getItem('myArr');
+
+  document.write(typeof test);
+
+  let saveObj = JSON.parse(localStorage.getItem("myCat"));
+  let saveArr = JSON.parse(localStorage.getItem("myArr"));
+  document.write(typeof saveObj + "<br>");
+  document.write(typeof saveArr + "<br>");
+</script>

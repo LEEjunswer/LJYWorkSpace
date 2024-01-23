@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      
+   background-color: #fff;
+    height: 100vh;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section{
+      /* 보통 컨텐츠 영역은 1200px ~ */
+      width: 70vw;
+      display: flex;
+      justify-content: center;  
+  
+    }
+    content1{
+      /* height: 60vh; */
+      display: flex;
+      flex-direction: column;
+      padding:20px; /* height: 100; */
+      background-color: yellow;
+       flex:1;
+      
+    }
+    content2{
+      
+     display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    sub1{
+
+      padding:20px;
+    
+      background-color: skyblue;
+    }
+    sub2{
+      padding:20px;
+  
+  
+      background-color: hotpink;
+    }
+    @media(max-width:768px){
+      body{
+        margin: 0;
+        display: inline;
+      }
+      section{
+      flex-direction: column ;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <content1>
+      <h2>content1</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti culpa laborum soluta voluptatum expedita sequi quia, adipisci tenetur, veritatis mollitia ipsa eos reprehenderit deserunt? Perferendis eveniet sequi vero sit velit.</content1>
+    <content2>
+    <sub1>
+      <h2>sub1</h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, numquam ducimus. Ipsum voluptate libero laboriosam eligendi omnis, praesentium eos, ex minima ea, labore corporis eveniet magni odio laborum facilis nobis.</sub1>
+    <sub2>
+      <h2>sub2</h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, itaque error reprehenderit, sit, nemo molestias quod odit dolor maxime optio fugit ut veniam ea alias vel natus aliquam ex fuga.</sub2>
+  </content2>
+  </section>
+
+
+
+  
+</body>
+</html>

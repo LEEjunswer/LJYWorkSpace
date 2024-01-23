@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      height: 300px;
+      width: 300px;
+      background-color: yellow;
+    }
+
+
+
+    h1 {
+      color: blue;
+    }
+
+    .t {
+      display: flex;
+
+    }
+
+    .btn {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <button class="btn">
+    <h1>네모 움직여</h1>
+  </button>
+  <div class="t">
+    <button class="btn" onclick="clicked0()">네모 키우기</button>
+    <button class="btn1">네모 움직이기</button>
+    <button class="btn" onclick="clicked2()"> 네모 회전하기</button>
+  </div>
+</body>
+
+</html>
+<script>
+  const box = document.querySelector('.box');
+  const btn = document.querySelector('.btn1');
+  const msg = document.querySelector('h1');
+
+  // btn.addEventListener("click", () => {
+  //   box.style.transform = "translateX(200px)"
+  //   box.style.transition = '4s';
+  //   msg.textContent = "네모 돌아와"
+  // })
+  // btn.addEventListener("mouseout", () => {
+  //   box.style.transform = "translateX(0px)"
+  //   box.style.transition = '4s';
+  //   msg.innerHTML = "네모 움직여"
+  // })
+  let isChecked = true;
+  btn.addEventListener("click", () => {
+    isChecked ? moveBox() : combackBox();
+  })
+
+  function clicked0() {
+    const box = document.querySelector('.box');
+    box.style.transform = 'scale(3.5)';
+    box.style.transition = '1s';
+    msg.textContent = "네모 작아져!"
+  }
+
+  function moveBox() {
+    const box = document.querySelector('.box');
+    box.style.transform = "translateX(200px)"
+    box.style.transition = '2s';
+    msg.textContent = "네모 돌아와";
+    isChecked = !isChecked;
+
+  }
+
+  function combackBox() {
+    const box = document.querySelector('.box');
+    box.style.transform = "translateX(0px)"
+    box.style.transition = '2s';
+    msg.textContent = "네모 움직여";
+    isChecked = !isChecked;
+
+  }
+
+  function clicked2() {
+    const box = document.querySelector('.box');
+    box.style.transform = 'rotate(180deg)';
+  }
+</script>

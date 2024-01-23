@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 class="t1"></h1>
+  <button class="btn1">중지</button>
+
+</body>
+
+</html>
+<script>
+  const btn = document.querySelector('.btn1');
+  const cnt = document.querySelector('.t1');
+  let time = 0;
+  // setInterval(h, 1000);
+
+  function h() {
+    cnt.textContent = ++time;
+  }
+
+  const break1 = setInterval(h, 1000);
+
+
+  btn.addEventListener('click', () => {
+    clearInterval(break1);
+  })
+</script>

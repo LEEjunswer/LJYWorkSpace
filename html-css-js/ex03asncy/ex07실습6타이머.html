@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      text-align: center;
+    }
+
+    .second {
+      font-size: 60px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="timer">
+      <div class="second"></div>
+    </div>
+  </main>
+</body>
+
+</html>
+<script>
+  const totalTime = 15 * 1000;
+  const startTime = new Date().getTime();
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = now - startTime;
+    // 남은 시간
+    const remain = totalTime - diff;
+    // 초단위 변환
+    const remainSec = (remain / 1000).toFixed(2);
+    let label = `남은시간 ${remainSec}초`;
+
+    if (remainSec <= 0) {
+
+      //타이머 종료
+      clearInterval(interval);
+      label = '15초가 지났습니다';
+
+    }
+    document.querySelector('.second').innerHTML = label;
+
+  }, 10);
+</script>

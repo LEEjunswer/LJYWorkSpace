@@ -1,0 +1,149 @@
+ /* Fontawesome 4.7 */
+ @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ /* reset CSS */
+ a{ text-decoration: none; color: #222;}
+ h1,h2,h3,h4,h5,h6{margin: 0px;}
+ button{cursor: pointer; outline: none;}
+ body{
+  margin: 0; 
+   height: 100vh;
+   font-size: 15px;
+   background-color: black;
+   font-family: 'Montserrat', sans-serif;
+  }
+   header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: skyblue;
+    /* justify-content: space-between; */
+   }
+   nav{
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+   }
+   .logo img{
+    height: 30px;
+    filter: invert();
+   }
+   .gnb{
+    
+    justify-content: space-between;
+   }
+   .gnb a{
+    margin: 0px 10px;
+    color: white;
+   }
+   .sns{
+   }
+   .sns i{
+    margin: 0px 5px;
+    color: white;
+    .gnb a:hover, sns i:hover{
+      color: bisque;
+    }
+   }
+
+   @media screen and (max-width: 767px){
+    header{
+     
+      /* width: 100%; */
+      /*  내용물(자식요소)의 크기에 맞춰 자동 조절 된다 */
+      height: auto;
+    }
+    nav{
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      align-self: start;
+      flex-direction: column;
+      margin: 0px;
+      position: relative  ;
+     
+    }
+    .logo {
+      width: 100%;
+      padding: 10px;
+   
+    }
+    .gnb{
+      height: 60%;
+      width: 100%;
+      display: flex;
+     flex-direction: column;
+     text-align: center;
+    
+  
+    }
+    /* a 태그는 인라인 요소  */
+    .gnb a{
+      align-items: center;
+      justify-content: center;
+      /* margin:  5px 0; */
+
+      padding: 8px;
+    }
+    .sns{
+    width: 100%;
+      display: flex;
+      background-color: red;
+      align-self: center;
+      justify-content: center;
+      padding: 10px;
+
+    }
+        /* 처음에는 gnb랑 ,sns가 보이지 않는다 */
+    .gnb , .sns{
+      display: none;
+    }
+    /* 버튼을 클릭했을 떄 .gnb , .sns 클래스 테그에 .on 붙여주기 */
+    /* 다시 보이게 하는 작업 */
+    .gnb.on, .sns.on{
+      display: flex;
+    }
+    .trigger{
+      /* border: 2px solid black; */
+      width: 25px;
+      height: 15px; 
+      position: absolute;
+      top:  20px;
+      right: 20px;
+
+
+    }
+    .trigger span{
+    transition: 0.3s;
+      background-color: bisque;  
+      height: 3px;
+      width: 100%; 
+      position: absolute ;
+    }
+    .trigger span:nth-child(1){
+      top: 0; 
+    }
+    .trigger span:nth-child(2){
+      top: 50%;
+    }
+    .trigger span:nth-child(3){
+      top: 100%;
+    }
+    
+    .trigger.active span:nth-child(1){
+      transform: rotate(45deg);
+      top:50%;
+    }
+    .trigger.active span:nth-child(2){
+      /* top: 50%; */
+      /* 투명도를 0으로 해준 것 */
+      opacity: 0;
+    }
+    .trigger.active span:nth-child(3){
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+   }

@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+body{
+  font-size: 14px;
+  font-family: 'Roboto',sans-serif;
+}
+.login-wrapper{
+  width: 400px;
+  height: 350px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.login-wrapper > h2{
+  font-size: 24px;
+  color: #6a24fe;
+  margin-bottom: 20px;
+}
+#login-form > input{
+  width: 100%;
+  height: 48px;
+  padding: auto;
+}

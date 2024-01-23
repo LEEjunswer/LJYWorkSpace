@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body onload="h();">
+  <h1 class="t1"></h1>
+  <button class="clear">재시작</button>
+  <button class="stop">정지</button>
+</body>
+
+</html>
+<script>
+  // html 태그 요소와 일반 변수를 구분하기 위해서 태그 객체는 앞에 $ 으로 구별해주기도 한다.
+  const t1 = document.querySelector('.t1');
+  const clear1 = document.querySelector('.clear');
+  const stop1 = document.querySelector('.stop');
+
+  function h() {
+
+    let cnt = 0;
+    let a = setInterval(() => {
+      t1.textContent = ++cnt;
+    }, 50);
+
+
+    clear1.addEventListener('click', () => {
+      clearInterval(a);
+      setTimeout(() => {
+        clearInterval(a);
+        // console.log("10초뒤에 실행");
+        h();
+      }, 1000);
+    })
+    stop1.addEventListener('click', () => {
+      clearInterval(a);
+    })
+
+  }
+</script>

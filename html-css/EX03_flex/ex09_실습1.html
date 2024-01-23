@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .parent{
+      border: 5px solid red;
+      display: flex;
+      height: 200px;
+
+    }
+    .s{
+      border: 8px solid red;
+      flex:1;
+      display: flex;
+      
+    } 
+    .child1{
+      background-color: yellow;
+      height:100%;
+      flex: 1;
+    }
+    .child2{
+      background-color: yellowgreen;
+      flex: 1;
+      height: 100%;
+    }
+    @media(max-width:768px){
+      .parent{
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="s">
+    <div class="child1"></div>
+    <div class="child2"></div>
+  </div>
+  <div class="s">
+    <div class="child1"></div>
+    <div class="child2"></div>
+  </div>
+  <div class="s">
+    <div class="child1"></div>
+    <div class="child2"></div>
+  </div>
+  </div>
+</body>
+</html>

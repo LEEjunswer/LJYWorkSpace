@@ -1,0 +1,145 @@
+ /* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+/* reset CSS */
+a{ text-decoration: none; color: #222;}
+h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
+button{cursor: pointer; outline: none; border: none;}
+input,textarea,select{
+  outline: none;
+} 
+body{margin: 0; 
+
+  height: 100vh;
+  font-family: 'Noto Sana KR', sans-serif;
+  font-size:  15px;
+  font-style: 300;
+  /* normal 400 bold 600 */
+}
+button,input,textarea,select{
+  font-family: 'Noto Sana KR', sans-serif;
+}
+section{
+  border:  1px solid black;
+  width:1280px;
+ margin: auto; 
+
+}
+/* header 부분 */
+.consulting-header{
+  text-align: center;
+}
+.consulting-header h1{
+  font-size: 32px;
+}
+.consulting-header span{
+  color: crimson;
+}
+.consulting-header hr{
+  border: none;
+  width: 100px;
+  height: 3px;
+  background-color: skyblue;
+}
+/* form 부분 */
+.consuting-form form{
+  border-top: 5px solid #ddd;
+  margin: 30px;
+}
+form .row{
+  display: flex;
+  border: 1px solid red;
+}
+.row .field{
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  flex: 1;
+}
+.row .field label{
+  margin: 5px 0;
+}
+.row .field input, select , textarea{
+  border: 1px solid #ddd;
+  padding: 7px;
+}
+.row .field input:hover,textarea :hover, 
+select :hover{
+  border: 1px solid skyblue;
+  box-shadow:  0 0  5px skyblue;
+}
+.row .field input:focus{
+  border: 1px solid skyblue;
+  box-shadow:  0 0  5px skyblue;
+}
+form label em{
+  color: red;
+}
+form textarea{
+  /* resize: none; */
+}
+
+/* policy */
+.policy{
+
+  /* display: flex; */
+}
+.policy h4{
+  margin:  10px 0;
+}
+.policy iframe{
+  border:  1px solid black;
+  width: 100%;
+  height: 100px;
+  border-radius: 3px;
+  padding: 7px;
+  /* iframe 외부 화면만 조절할 수 있다 : 독립존재하는 html 문서이기 떄문이다  */
+  /* color: red; */
+}
+.btn-submit{
+  border-radius: 3px;
+  background-color:  royalblue;
+  color: white;
+  padding:  10px 50px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+.btn-submit:hover{
+  background-color: royalblue;
+}
+
+/* 모바일 환경 */
+@media screen and (max-width:768px){
+  body{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+  }
+  section{
+    width: 100%;
+    box-sizing: border-box; 
+   
+  }
+  form .row{
+    flex-direction: column;
+  }
+
+  .consulting-header h1{
+    font-size:22px;
+  }
+  .consulting-header{
+    font-size:15px;
+  }
+  form{
+    width: 100%;
+
+  }
+  .row{
+    flex-direction: column;
+  }
+  .btn-submit{
+  
+    width: 100%;
+  }
+}

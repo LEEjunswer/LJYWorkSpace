@@ -1,0 +1,115 @@
+ /* Fontawesome 4.7 */
+ @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+ /* reset CSS */
+ a{ text-decoration: none; color: #222;}
+ h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
+ button{cursor: pointer; outline: none; border: none;}
+ input,textarea,select{
+   outline: none;
+ } 
+ body{margin: 0; 
+ 
+   height: 100vh;
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ button,input,textarea,select{
+   font-family: 'Noto Sana KR', sans-serif;
+ }
+ section{
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  border: 1px solid black;
+ }
+ .post{
+  display: flex;
+ }
+ .post:nth-child(odd){
+  flex-direction: column;
+ }
+ .post:nth-child(even){
+  flex-direction: column-reverse;
+ }
+ .image{
+  width: 250px;
+  overflow: hidden;
+ }
+ /*img 인라인 블럭 -> 자체적으로 마진이 있다 */
+ .image img{
+  width: 100%;
+  display: block;
+  transition: 3s;
+  /* margin-bottom: 10px; */
+ }
+ .desc{
+  background-color: lightseagreen;
+  color: #fff;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+ .image img:hover{
+  transform: scale(1.2);
+ }
+ .desc h2{}
+ .desc p{
+  text-align: center;
+ }
+ 
+@media(max-width:768px){
+  section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .post{
+    margin: 0;
+  }
+  .post:nth-child(even){
+    display: flex;
+    flex-direction: column;
+  }
+  .image{
+    width: 100%;
+    height: 100%;
+  }
+  .desc{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width:768px) and (max-width:1024px){
+
+  section{
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; 
+    
+  }
+  .post{
+    margin: 0;
+    width: 100%;
+  }
+  .image{
+   
+    flex: 1;
+  }
+  
+  .desc{
+    height: auto;
+    flex: 1;
+  }
+  .post:nth-child(odd){
+    flex-direction: row;
+  }
+  .post:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+  
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      text-align: center;
+      line-height: 60px;
+      height: 60px;
+      width: 100%;
+      background-color: lightslategray;
+    }
+
+    .user {
+      text-align: center;
+      height: 400px;
+      width: 100%;
+      line-height: 400px;
+      font-size: 42px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <label for="">유저 ID</label>
+    <input type="text" class="check">
+  </main>
+  <p class="user">
+    유저 검색 결과없음
+  </p>
+</body>
+
+</html>
+<script>
+  const userList = [{
+      id: 123,
+      name: "홍길동",
+      address: '서울'
+    },
+    {
+      id: 247,
+      name: "둘리",
+      address: '수원'
+    },
+    {
+      id: 300,
+      name: "또치",
+      address: '대전'
+    }
+  ]
+  const check = document.querySelector('.check');
+  const log = document.querySelector('.user');
+  check.addEventListener('keyup', () => {
+
+
+    for (let i = 0; i < userList.length; i++) {
+      if (userList[i].id == check.value) {
+        log.textContent = userList[i].name;
+      }
+    }
+
+  });
+</script>

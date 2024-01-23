@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+    .container{
+ 
+      padding: 0;
+    }
+    .header{
+      height: 10vh;
+      padding: 10px;  
+      background-color: yellow;
+    }
+  .banner{
+    height: 10vh;
+    padding: 10px; 
+    background-color: green;
+  }
+  .center{
+    height: 80vh;
+    display: flex;
+  
+  }
+  .navi{
+  flex: 2;
+  padding: 10px; 
+  background-color: hotpink;
+  }
+.main{
+  flex: 8;
+  padding: 15px; 
+  background-color: skyblue;
+}
+@media(max-width:768px){
+  body{
+    flex-direction: column;
+  }
+}
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="header"><h2>Header</h2></div>
+  <div class="banner"><h2>Banner</h2></div>
+  <div class="center">
+    <div class="navi"><h2>Navi</h2></div>
+    <div class="main"><h2>Main</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem officiis fuga saepe harum dolorum et sequi ratione, rerum neque iste similique. Impedit iure aut voluptas a tenetur aliquid in?</div>
+  </div>
+  </div>
+</body>
+</html>

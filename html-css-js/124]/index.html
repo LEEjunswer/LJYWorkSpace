@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      display: flex;
+
+    }
+
+    .box {
+      border: 1px solid black;
+      text-align: center;
+      line-height: 60px;
+      font-size: 25px;
+      height: 60px;
+      width: 60px;
+      margin-right: 20px;
+
+
+    }
+
+
+
+    .check {
+      height: 40px;
+      width: 150px;
+      margin: 50px;
+    }
+
+    .box1 {
+      height: 250px;
+      width: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </main>
+  <input type="text" class="check" />
+
+  <div class="box1"></div>
+
+</body>
+
+</html>
+<script>
+  let boxs = [...document.querySelectorAll('.box')];
+  const box1 = document.querySelector('.box1');
+  const check = document.querySelector('.check');
+  let cnt = 1;
+
+  function clickPlus(check) {
+    boxs[check].textContent = cnt;
+    cnt++;
+  }
+  boxs.forEach((box, index) => {
+    box.addEventListener('click', () => {
+      clickPlus(index);
+    })
+  })
+
+  check.addEventListener('keyup', (t) => {
+    if (t.isComposing) return;
+    console.log(check.value);
+    boxs = [...document.querySelectorAll('.box')];
+    boxs.forEach((box, index) => {
+      if (box.textContent == check.value) {
+        box.style.backgroundColor = 'red';
+      } else {
+        box.style.backgroundColor = 'white';
+      }
+    })
+
+  })
+
+  function delCheck(index) {
+    // const parentLi = boxs[index];
+    // console.log(parentLi)
+    boxs[index].remove();
+  }
+
+
+  check.addEventListener('keydown', (event) => {
+    if (event.isComposing) return;
+    if (event.code === 'Enter') {
+      boxs = [...document.querySelectorAll('.box')];
+      boxs.forEach((box, index) => {
+        if (box.textContent == check.value) {
+          box.textContent = "";
+        }
+
+      })
+    }
+  })
+
+  boxs.forEach((box, index) => {
+    box.addEventListener('dragstart', (event) => changebox(event, index));
+  });
+
+  function changebox(event, index) {
+    boxs.forEach((box, i) => {
+      box.addEventListener('dragover', e => {
+        e.style.backgroundColor = 'green';
+        e.preventDefault();
+      });
+      boxdel(event, index);
+    });
+  }
+
+  function boxdel(event, index) {
+    box1.addEventListener('dragover', e => {
+      e.preventDefault();
+    });
+    box1.addEventListener('drop', () => {
+      if (boxs[index].textContent == "") {
+        // alert("값이 없습니다");
+        return;
+      }
+      delCheck(index);
+    });
+  }
+</script>

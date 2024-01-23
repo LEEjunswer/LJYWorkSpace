@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+
+
+    }
+
+    .box {
+      display: flex;
+      width: 200px;
+      flex-direction: column;
+      border: 1px solid red;
+      padding: 20px;
+      margin: 10px;
+      justify-content: space-between;
+
+    }
+
+    @media(max-width:768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <header>Card #01</header>
+      <content>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, recusandae. Nobis ab neque ullam
+        laborum illo s, voluptates, at veniam maiores odit sed
+        aliquid esse nihil dolores qui saepe?</content>
+      <img src="logo/log.png" width="200" height="150">
+    </div>
+    <div class="box">
+      <header>Card #02</header>
+      <content>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, maiores?</content>
+      <img src="logo/log.png" width="200" height="150">
+    </div>
+    <div class="box">
+      <header>Card #03</header>
+      <content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aliquid odit est dolorem laboriosam
+        molestias porro, a nostrum omnis, odio blanditiis magnam itaque cum? A sequi quas inventore odio quidem?
+      </content>
+      <img src="logo/log.png" width="200" height="150">
+    </div>
+  </div>
+
+</body>
+
+</html>

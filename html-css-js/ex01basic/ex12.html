@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li {
+      margin-bottom: 20px;
+      color: crimson;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="button-wrapper">
+      <button class="ascending">오름차순</button>
+      <button class="decending">내림차순</button>
+    </div>
+    <ul class="user_list">
+
+    </ul>
+  </main>
+</body>
+
+</html>
+<script>
+  const userDataList = [{
+      id: 2,
+      name: '곰'
+    },
+    {
+      id: 10,
+      name: '여우'
+    },
+    {
+      id: 4,
+      name: '사자'
+    },
+    {
+      id: 29,
+      name: '기린'
+    },
+    {
+      id: 101,
+      name: '호랑이'
+    }
+  ]
+
+  const user = document.querySelector('.user_list');
+  for (let i = 0; i < userDataList.length; i++) {
+    let li = document.createElement('li');
+    user.appendChild(li);
+    li.innerHTML += `${userDataList[i].id} : ${userDataList[i].name}`;
+  }
+
+  const upper = document.querySelector('.ascending');
+  const under = document.querySelector('.decending');
+
+  under.addEventListener('click', () => {
+    for (let i = 0; i < userDataList.length; i++) {
+      li = document.querySelectorAll('li');
+      user.removeChild(li[0]);
+    }
+
+    userDataList.sort(function (a, b) {
+      if (a.id > b.id) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+    for (let i = 0; i < userDataList.length; i++) {
+      let li = document.createElement('li');
+      user.appendChild(li);
+      li.innerHTML = `${userDataList[i].id}:${userDataList[i].name}`;
+    }
+  })
+  upper.addEventListener('click', () => {
+    for (let i = 0; i < userDataList.length; i++) {
+      li = document.querySelectorAll('li');
+      user.removeChild(li[0]);
+    }
+
+    userDataList.sort(function (a, b) {
+      if (a.id > b.id) {
+        return -1;
+      } else {
+        return -1;
+      }
+    });
+    for (let i = 0; i < userDataList.length; i++) {
+      let li = document.createElement('li');
+      user.appendChild(li);
+      li.innerHTML = `${userDataList[i].id}:${userDataList[i].name}`;
+    }
+  })
+</script>

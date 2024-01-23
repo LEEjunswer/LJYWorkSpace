@@ -1,0 +1,76 @@
+ /* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* reset CSS */
+a{ text-decoration: none; color: #222;}
+h1,h2,h3,h4,h5,h6{margin: 10px;}
+button{cursor: pointer; outline: none;}
+body{margin: 0; 
+  height: 100vh;}
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box {
+    width: 600px;
+    height: 150px;
+    /* border: 1px solid black; */
+    background-color: darkgrey;
+    display: flex;
+   
+    margin: 5px;
+    border-radius: 5px;
+
+  }
+  .box img{
+    margin: 5px;
+    background-size: cover;
+    line-height: 150px;
+    height: 100px;
+    width: 100px;
+     
+  }
+  p{
+    margin: 10px;
+  }
+
+  /* 모바일 환경 */
+  @media screen and (max-width: 767px){
+    .container{
+      display: flex;
+      flex-direction: column;
+      box-sizing: content-box;
+   
+    }
+    .box{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 98%;
+    }
+    .box img{
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+  /* 태블릿 환경 */
+  @media (min-width:768px) and (max-width:1024px){
+    .container{
+       width: 100%;
+       height: 100%;
+      flex-direction: column;
+     
+    }
+    .box{  
+    flex: 1;
+    width: 100%;
+    height: 90%;
+    box-sizing: content-box;
+    }
+    .box img{
+ 
+      height: 180px;
+      width: 150px;
+      }
+  }
